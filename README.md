@@ -1,17 +1,21 @@
 # CS6910-Assignment-2
 
-There are two folders in the repository 'Part-A' and 'Part-B', which contain the necessary sub-codes (codes for each question whevenever needed), as well as the master-codes in the Python scripts 'train_parta.py' and 'train_partb.py'. Let us go over the contents one by one:
+Welcome to the CS6910 Assignment 2 repository! This assignment focuses on deep learning techniques for image classification and hyperparameter optimization using PyTorch and WandB. Below is an overview of the folder structure and contents of this repository.
 
-## Folder Part-A:
+## Folder Structure
 
-- /Question_1.ipynb: This is the python notebook containing the solution to Question 1 of Part A. The small code defines a Convolutional Neural Network (CNN) model in PyTorch for image classification on the iNaturalist dataset that we received as part of the question. The code is very user-friendly and allows customization of parameters like the number of convolution filters for the first convolution layer, choice of activation functions (ReLU, GELU, SiLU, Mish) for the convolution layers, organization of filters in layers (same, double, halve), batch normalization, and dropout. The dropout is applied after the final MaxPool layer to the flattened input to the fully connected layer. The CNN model architecture consists of five convolutional layers followed by max-pooling layers. The forward method executes the layers sequentially, applying activations, pooling, and dropout as specified, and includes custom activation functions like Mish.
-- /Question_2.ipynb: This code is for training a neural network using PyTorch and WandB (Weights and Biases) for hyperparameter optimization. It starts by installing the necessary packages and importing the required libraries. Then, it sets up a hyperparameter sweep using WandB, defining the parameters to be tuned, such as the number of filters, filter organization, fully connected layer size, data augmentation, activation function, batch normalization, and dropout rate. The neural network training function is defined, which creates a CNN model based on the specified hyperparameters, sets up the optimizer and loss function, and performs training and validation epochs. The main function initializes the WandB run, sets up the hyperparameters based on the sweep configuration, defines data transformations, loads the dataset, and runs the neural network training function using the hyperparameter values from the sweep. Finally, it uses WandB's agent method to run the main function multiple times with different hyperparameter combinations as specified in the sweep, facilitating automated hyperparameter optimization and logging the results with WandB.
-- /Question_3.ipynb: This code is mainly to train the CNN model using the best hyperparameters detected from the Bayesian Sweep from question 2, and then using this set of hyperparaeter to find the accuracy on the test dataset. Finally, the code also randomly samples 10 images from the test dataset and then predicts them using the learned parameters and prints the images along with the predictions.
-- /train_parta.py: This is the main training file, which culminates all of the above and logs the various metrics in WandB with increasing epochs.
+- **Part-A**:
+  - `Question_1.ipynb`: This notebook contains the implementation of a Convolutional Neural Network (CNN) model in PyTorch for image classification using the iNaturalist dataset. It offers customizable parameters such as the number of convolution filters, activation functions (ReLU, GELU, SiLU, Mish), filter organization, batch normalization, and dropout. The model architecture includes five convolutional layers followed by max-pooling layers.
+  - `Question_2.ipynb`: This notebook demonstrates neural network training with hyperparameter optimization using PyTorch and WandB. It sets up a hyperparameter sweep, defines parameters like the number of filters, fully connected layer size, activation function, batch normalization, and dropout rate, and performs training and validation epochs.
+  - `Question_3.ipynb`: This notebook trains the CNN model using the best hyperparameters detected from the Bayesian Sweep in Question 2 and evaluates its accuracy on the test dataset. Additionally, it randomly samples 10 images from the test dataset and makes predictions using the learned parameters.
+  - `train_parta.py`: The main training script that consolidates the functionalities from the notebooks above and logs various metrics in WandB with increasing epochs.
 
-## Folder Part-B:
+- **Part-B**:
+  - `Question_3.ipynb`: This notebook showcases transfer learning for image classification using a pre-trained ResNet-50 model in PyTorch. It freezes all layers except the final fully connected layer and adapts it for a specific classification task with 10 output classes.
+  - `train_partb.py`: The main training script for Part B, which includes the transfer learning implementation and metric logging with WandB.
 
-- /Question_3.ipynb: This code snippet demonstrates a common approach to transfer learning for image classification using a pre-trained ResNet-50 model in PyTorch. Transfer learning is employed by loading the pre-trained ResNet-50 model from ```torchvision.models``` and freezing all its layers except the final fully connected layer. The final layer is replaced with a new one suitable for the specific classification task, which involves 10 output classes in this case.
-- /train_partb.py: This is the main training file, which not only culminates the above question but also logs the various metrics in WandB with increasing epochs.
+## Usage
 
-
+1. Start by exploring the `Part-A` or `Part-B` folder based on your interest.
+2. Execute the Jupyter notebooks (`*.ipynb`) or Python scripts (`*.py`) to run the code and follow the instructions provided within each file.
+3. If you have any further questions in any part of the assignment, please feel free to contact me at ce22s003@smail.iitm.ac.in (+919083782161).
