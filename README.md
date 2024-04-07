@@ -18,4 +18,5 @@ Welcome to the CS6910 Assignment 2 repository! This assignment focuses on deep l
 
 1. Start by exploring the `Part-A` or `Part-B` folder based on your interest.
 2. Execute the Jupyter notebooks (`*.ipynb`) or Python scripts (`*.py`) to run the code and follow the instructions provided within each file.
-3. If you have any further questions in any part of the assignment, please feel free to contact me at ce22s003@smail.iitm.ac.in (+919083782161).
+3. In most of the codes in this repository, the dataset was loaded onto my Kaggle account and then the codes were run, and hence you would see the command line ```dataset = ImageFolder('/kaggle/input/dataset/inaturalist_12K/train', transform=train_transform)``` (for training) and ``` test_dataset = ImageFolder('/kaggle/input/dataset/inaturalist_12K/val', transform=vanilla_transform)``` (for test) in many places. In case you want to run the code, please modify the line accordingly and then plug in your dataset root directories and then run the codes.
+4. If you have any further questions in any part of the assignment, please feel free to contact me at ce22s003@smail.iitm.ac.in (+919083782161).
