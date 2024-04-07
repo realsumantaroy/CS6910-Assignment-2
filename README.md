@@ -1,6 +1,6 @@
 # CS6910-Assignment-2
 
-Welcome to the CS6910 Assignment 2 repository! This assignment focuses on deep learning techniques for image classification and hyperparameter optimization using PyTorch and WandB. Below is an overview of the folder structure and contents of this repository.
+Welcome to my CS6910 Assignment 2 repository! This assignment focuses on deep learning techniques for image classification and hyperparameter optimization using PyTorch and WandB. Below is an overview of the folder structure and contents of this repository.
 
 ## Folder Structure
 
